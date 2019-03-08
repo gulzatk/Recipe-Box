@@ -2,13 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
-import Provider from 'react-redux';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import recipeListReducer from './reducers/recipe-list-reducer';
+import { HashRouter } from 'react-router-dom';
+
+const store = createStore(recipeListReducer);
+
+let unsubscribe = store.subscribe(() =>
+    console.log(store.getState())
+);
+
 
 ReactDOM.render(
-    <Provider>
-<App />, 
-    </Provider>,
+    <HashRouter>
+    <Provider store={store}>
+        <App />
+    </Provider>
+    </HashRouter>,
 document.getElementById('root'));
-
-serviceWorker.unregister();
