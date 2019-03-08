@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import RecipeList from './components/RecipeList';
-import NewRecipe from './components/NewRecipe';
+import NewRecipeForm from './components/NewRecipeForm';
 import { pseudoRandomBytes } from 'crypto';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -49,7 +49,7 @@ class App extends React.Component {
               changeLikes={this.handleLikesChange}
               changeDisLikes={this.handleDisLikesChange}/>}
           />
-          <Route path='/new' render = {() => <NewRecipe />} />
+          <Route path='/new' render = {() => <NewRecipeForm />} />
         </Switch>
         </div>
     );
