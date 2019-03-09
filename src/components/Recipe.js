@@ -8,13 +8,13 @@ function Recipe(props) {
         <div>
             <h3>{props.name}</h3>
             <p> {props.ingredients}</p>
-            <p> {props.direction}
+            <p> {props.direction}</p>
             <button onClick={() => props.changeLikes(props.id)}
             >👍</button>
             <span>Likes: {props.likes}</span>
             <button onClick={() => props.changeDisLikes(props.id)}>👎</button>
             <span>Dislikes:{props.dislikes}</span>
-      </p>
+      
         <hr />
         </div>
     );

@@ -49,7 +49,7 @@ class App extends React.Component {
               changeLikes={this.handleLikesChange}
               changeDisLikes={this.handleDisLikesChange}/>}
           />
-          <Route path='/new' render = {() => <NewRecipeForm />} />
+          <Route path='/new' render = {() => <NewRecipeForm     />} />
         </Switch>
         </div>
     );
