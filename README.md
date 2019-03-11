@@ -1,5 +1,58 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Recipe Website
+
+### Capstone project for Epicodus 03/08/2019
+
+### By Gulzat Karimova
+
+## MVP Project Description
+
+    An application helps users to find different kinds of recipes and add their own recipe to the list. Also user can create weekly menu and don’t need to think “What will I cook for today?
+
+## Specifications for MVP
+1. The user can see list of different kinds of recipes 
+2. The user can see step by step instruction of recipes
+3. The user can add own recipe to the list
+4. The user can like or dislike the recipe
+5. The user can comment the recipe
+6. The habits can choose recipe by category (appetizers, main dish, salads, soup, dessert...)
+
+
+## Specification after MVP
+
+1. Add user authentication
+2. Add “Favorite” file, where user can save favorite recipes
+3. User can create weekly menu
+4. The user can choose recipe by cuisine (African, Asian, Indian etc...)
+
+## Setup/Installation Instructions
+
+* Clone repository from Github: https://github.com/gulzatk/Your-Dayli-Meal.git
+* Download all packages by typing "npm install"
+* To run the program type "npm run start"
+
+## Used Technologies:
+
+* JavaScript
+* React
+* CSS
+* UIkit
+* HTML
+* GIT
+* Firebase
+* Vs Code
+
+## Support and contact details
+
+If you have any questions or suggestions please feel free to email me: gulzat.karimova@gmail.com
+
+## License
+This software is licensed under the MIT license.
+
+Copyright (c) 2019 ** Gulzat Karimova **
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,43 +79,3 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

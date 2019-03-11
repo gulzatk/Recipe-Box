@@ -1,6 +1,10 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import { connect } from 'react-redux';
+// import UIkit from 'uikit';
+import './styles/Form.css';
+
+// UIkit.formCustom( );
 
 function NewRecipeForm (props) {
     console.log(props);
@@ -28,31 +32,35 @@ function NewRecipeForm (props) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleNewRecipeFormSubmission}>
+        <div >
+            <form classNmae="formContainer" onSubmit={handleNewRecipeFormSubmission}>
                 <h4>Add ne recipe to the list</h4>
+                <label>Recipe Name   </label>
                 <input type="text"
                     id="name"
                     placeholder="recipe name"
                     ref={input => {
                         _name = input;
                     }}
-                />
+                /><br/><br/>
+                <label>Ingredients:  </label>
                 <textarea
                     id="ingredients"
                     placeholder="ingredients..."
                     ref={textarea => {
                         _ingredients = textarea;
                     }}
-                />
+                /><br/><br/>
+                <label>Direction:  </label>
                 <textarea
                     id="direction"
                     placeholder="direction..."
                     ref={textarea => {
                         _direction = textarea;
                     }}
-                />
-                <button type="submit">Add!</button>
+                /><hr/>
+                <br/>
+                <button className="button" type="submit">Add!</button>
             </form>
         </div>
     );

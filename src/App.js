@@ -6,6 +6,7 @@ import { pseudoRandomBytes } from 'crypto';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Switch, Route, withRouter } from 'react-router-dom';
+import "../node_modules/uikit/dist/css/uikit.css";
 
 
 
