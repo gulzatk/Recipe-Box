@@ -11,34 +11,34 @@ import "../node_modules/uikit/dist/css/uikit.css";
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { };
 
-    this.handleLikesChange = this.handleLikesChange.bind(this);
-    this.handleDisLikesChange = this.handleDisLikesChange.bind(this);
-  }
+  //   this.handleLikesChange = this.handleLikesChange.bind(this);
+  //   this.handleDisLikesChange = this.handleDisLikesChange.bind(this);
+  // }
 
 
-  handleLikesChange(id) {
-    for (let recipe of this.state.masterRecipeList) {
-      if (recipe.id === id) {
-        recipe.likes++;
-        let newState = Object.assign({}, this.state.masterRecipeList, recipe);
-        this.setState({ newState });
-      }
-    }
-  }
+  // handleLikesChange(id) {
+  //   for (let recipe of this.state.masterRecipeList) {
+  //     if (recipe.id === id) {
+  //       recipe.likes++;
+  //       let newState = Object.assign({}, this.state.masterRecipeList, recipe);
+  //       this.setState({ newState });
+  //     }
+  //   }
+  // }
 
-  handleDisLikesChange(id) {
-    for (let recipe of this.state.masterRecipeList) {
-      if (recipe.id === id) {
-        recipe.dislikes++;
-        let newState = Object.assign({}, this.state.masterRecipeList, recipe);
-        this.setState({ newState });
-      }
-    }
-  }
+  // handleDisLikesChange(id) {
+  //   for (let recipe of this.state.masterRecipeList) {
+  //     if (recipe.id === id) {
+  //       recipe.dislikes++;
+  //       let newState = Object.assign({}, this.state.masterRecipeList, recipe);
+  //       this.setState({ newState });
+  //     }
+  //   }
+  // }
 
 
   render() {
@@ -57,14 +57,6 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    masterRecipeList: state
-  };
-};
 
-App.propTypes = {
-  masterRecipeList: PropTypes.object
-};
 
-export default withRouter(connect(mapStateToProps)(App));
+export default App;

@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import recipeListReducer from './reducers/recipe-list-reducer';
 import { HashRouter } from 'react-router-dom';
+import { initialState } from './constants/initialState';
 
 const store = createStore(recipeListReducer);
 
