@@ -1,24 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import recipeListReducer from './reducers/recipe-list-reducer';
-import { HashRouter } from 'react-router-dom';
-import { initialState } from './constants/initialState';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { HashRouter } from "react-router-dom";
+import rootReducer from "./reducers";
 
-const store = createStore(recipeListReducer);
+const store = createStore(rootReducer);
 
-let unsubscribe = store.subscribe(() =>
-    console.log(store.getState())
-);
-
+// let unsubscribe = store.subscribe(() =>
+//     console.log(store.getState())
+// );
 
 ReactDOM.render(
-    <HashRouter>
+  <HashRouter>
     <Provider store={store}>
-        <App />
+      <App />
     </Provider>
-    </HashRouter>,
-document.getElementById('root'));
+  </HashRouter>,
+  document.getElementById("root")
+);

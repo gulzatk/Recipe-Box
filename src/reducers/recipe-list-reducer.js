@@ -1,7 +1,8 @@
 import constants from "../constants";
 const { initialState, types } = constants;
 
-const recipeListReducer = (state = initialState.recipesById, action) => {
+const recipeListReducer = (state = initialState.recipes, action) => {
+  console.log("recipe-list-reducer invoked");
   const {
     name,
     image,
@@ -28,11 +29,8 @@ const recipeListReducer = (state = initialState.recipesById, action) => {
         likes: likes,
         dislikes: dislikes
       };
-      console.log("New State:");
-      console.log(state[id]);
       return state;
     default:
-      console.log("Did not come here.");
       return state;
   }
 };

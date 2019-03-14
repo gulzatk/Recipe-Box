@@ -8,72 +8,61 @@ UIkit.dropdown();
 
 function Header() {
   return (
-    <div>
-      <nav className="uk-navbar-container uk-margin" uk-navbar>
-        <div className="uk-navbar-center">
-          <ul className="uk-navbar-nav">
-            <li>
-              <NavLink to="/">
-                <span
-                  className="uk-icon uk-margin-small-right"
-                  uk-icon="icon: food"
-                />
-                Your Dayli Meal.
-              </NavLink>
-            </li>
-          </ul>
-
-          <div className="uk-navbar-item">
-            <form action="javascript:void(0)">
-              <input
-                className="uk-input uk-form-width-small"
-                type="text"
-                placeholder="search..."
-              />
-              <button className="uk-button uk-button-default">Search</button>
-            </form>
-          </div>
+    <div className="bodyStyle">
+      <div className="grid-container">
+        <NavLink to="/">
+          <h1 className="title">Your Dayli Meal.</h1>
+        </NavLink>
+        <div className="searchStyle">
+          <label>Find a recipe: </label>
+          <input className="search" type="text" placeholder="search..." />
         </div>
-      </nav>
-      <nav className="uk-navbar-container" uk-navbar>
+      </div>
+      <nav className="uk-navbar-container" uk-navbar="true">
         <div className="uk-navbar-left">
           <ul className="uk-navbar-nav">
             <li className="uk-active">
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/">Recipes</NavLink>{" "}
+              <NavLink to="/recipes">All Recipes</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">Special Diets</NavLink>
               <div className="uk-navbar-dropdown">
                 <ul className="uk-nav uk-navbar-dropdown-nav">
                   <li className="uk-active">
-                    <NavLink to="#">All recipes</NavLink>
+                    <NavLink to="#">Dairy Free</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Apetizers</NavLink>
+                    <NavLink to="/">Vegan</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Salads</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/">Soups</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/">Meat</NavLink>
+                    <NavLink to="/">Vegetarian</NavLink>
                   </li>
                   <li>
                     <NavLink to="/">Seafood</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/">Vegeterian</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/">Desserts</NavLink>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <NavLink to="/new">Add recipe</NavLink>
+              <NavLink to="/">Appetizers</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">Salads</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">Soups</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">Main Dish</NavLink>
+            </li>
+            <li>
+              <NavLink to="/">Desserts</NavLink>
+            </li>
+            <li>
+              <NavLink to="/new">Add New Recipe</NavLink>
             </li>
             <br />
             <li>

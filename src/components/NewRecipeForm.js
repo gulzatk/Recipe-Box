@@ -8,7 +8,6 @@ import { ADD_RECIPE } from "../constants/ActionTypes";
 // UIkit.formCustom( );
 
 function NewRecipeForm(props) {
-  console.log(props);
   let _name = null;
   let _image = null;
   let _description = null;

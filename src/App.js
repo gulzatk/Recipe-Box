@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from './components/Header';
-import RecipeList from './components/RecipeList';
-import NewRecipeForm from './components/NewRecipeForm';
-import { pseudoRandomBytes } from 'crypto';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import React from "react";
+import Header from "./components/Header";
+import RecipeList from "./components/RecipeList";
+import NewRecipeForm from "./components/NewRecipeForm";
+import { pseudoRandomBytes } from "crypto";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { Switch, Route, withRouter } from "react-router-dom";
 import "../node_modules/uikit/dist/css/uikit.css";
-
-
+import Home from "./components/Home";
+import RecipeDetails from "./components/RecipeDetails";
 
 class App extends React.Component {
   // constructor(props) {
@@ -18,7 +18,6 @@ class App extends React.Component {
   //   this.handleLikesChange = this.handleLikesChange.bind(this);
   //   this.handleDisLikesChange = this.handleDisLikesChange.bind(this);
   // }
-
 
   // handleLikesChange(id) {
   //   for (let recipe of this.state.masterRecipeList) {
@@ -40,23 +39,28 @@ class App extends React.Component {
   //   }
   // }
 
-
   render() {
     return (
       <div>
         <Header />
         <Switch>
-          <Route exact path='/' render={() => <RecipeList recipeList={this.props.masterRecipeList}
-              changeLikes={this.handleLikesChange}
-              changeDisLikes={this.handleDisLikesChange}/>}
+          <Route exact path="/" render={() => <Home />} />
+          <Route
+            path="/recipes"
+            render={() => (
+              <RecipeList
+                recipeList={this.props.masterRecipeList}
+                changeLikes={this.handleLikesChange}
+                changeDisLikes={this.handleDisLikesChange}
+              />
+            )}
           />
-          <Route path='/new' render = {() => <NewRecipeForm     />} />
+          <Route path="/new" render={() => <NewRecipeForm />} />
+          <Route path="/recipeDetails" render={() => <RecipeDetails />} />
         </Switch>
-        </div>
+      </div>
     );
   }
 }
-
-
 
 export default App;
